@@ -15,7 +15,7 @@ import Footer from '@/components/Footer';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start','end end'] });
   const glow = useTransform(scrollYProgress, [0, 1], ['opacity-100', 'opacity-0']);
 
